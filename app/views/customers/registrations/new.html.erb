@@ -20,6 +20,13 @@
   </div>
 
   <div class="field">
+    <% @cities.each do |city| %>
+      <%= f.radio_button :city_id, city.id %>
+      <%= city.city %> <br />
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
