@@ -8,6 +8,8 @@ class Cleaner < ApplicationRecord
   validates :phone_number, presence: {message: I18n.t('customer.mobile_no_validation')},
                      numericality: true,
                      length: { minimum: 10, maximum: 15 }
+
+  belongs_to :city
   
   def email_required?
     false

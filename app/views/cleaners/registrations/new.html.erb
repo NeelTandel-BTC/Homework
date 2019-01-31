@@ -4,8 +4,25 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <% @cities.each do |city| %>
+      <%= f.radio_button :city_id, city.id %>
+      <%= city.city %> <br />
+    <% end %>
   </div>
 
   <div class="field">
@@ -27,3 +44,12 @@
 <% end %>
 
 <%= render "cleaners/shared/links" %>
+
+<script>
+  $(function () {
+    $("input[type=radio]").on("change", function () {
+      $("input[type=radio]").prop('checked', false);
+      $(this).prop('checked', true);
+    });
+  });
+</script>
