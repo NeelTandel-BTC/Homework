@@ -1,0 +1,10 @@
+<%= form_for :booking, url: customer_bookings_path do |f| %> 
+  <div>
+    <%= f.label :booking_time %><br>
+    <%= f.datetime_select :booking_time , min: Date.today %>
+  </div>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
