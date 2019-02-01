@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :customer_bookings 
-  get 'cleaner_bookings', to: 'cleaner_bookings#index'
+  resources :cleaner_bookings 
   root 'customer_bookings#index'
 end

@@ -16,9 +16,11 @@ ActiveRecord::Schema.define(version: 20190131104300) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.datetime "booking_time"
     t.bigint "customer_id"
     t.bigint "cleaner_id"
+    t.date "date"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cleaner_id"], name: "index_bookings_on_cleaner_id"

@@ -1,7 +1,17 @@
 <%= form_for :booking, url: customer_bookings_path do |f| %> 
   <div>
-    <%= f.label :booking_time %><br>
-    <%= f.datetime_select :booking_time , min: Date.today %>
+    <%= f.label :date %><br>
+    <%= f.date_field :date, value: Date.today %>
+  </div>
+
+  <div>
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time, value: Time.current %>
+  </div>
+   
+  <div>
+    <%= f.label :end_time %><br>
+    <%= f.time_select :end_time, value: Time.current %>
   </div>
   
   <p>

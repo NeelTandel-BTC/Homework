@@ -62,7 +62,6 @@ class Customers::RegistrationsController < Devise::RegistrationsController
   # end
 
   def cities
-    binding.pry
     @cities = City.all.order(:city)
   end
 end

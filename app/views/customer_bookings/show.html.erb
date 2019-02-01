@@ -1,1 +1,20 @@
-done
+<table>
+  <tr>
+    <th>Cleaner name</th>
+    <th>Booking Date</th>
+    <th>Booking Time</th>
+    <th>Booking operations</th>
+  </tr>
+    <tr>
+      <td>
+        <%= @booking.cleaner.first_name %>
+      </td>
+      <td>
+        <%= @booking.booking_time.strftime("%d/%m/%Y") %>
+      </td>
+      <td>
+        <%= @booking.booking_time.strftime("%I:%M %p") %>
+      </td>
+      <td>
+    </tr>
+</table>
