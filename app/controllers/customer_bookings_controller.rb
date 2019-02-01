@@ -28,7 +28,6 @@ class CustomerBookingsController < ApplicationController
       @bookings = city_cleaners.map { |cleaner| cleaner.bookings }.flatten!
       find_free_cleaner() unless @bookings.empty? 
       @customer_booking.cleaner_id = @city_cleaner_ids.sample
-      binding.pry
       if @customer_booking.save
         redirect_to customer_bookings_path
       else
