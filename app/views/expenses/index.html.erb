@@ -1,7 +1,6 @@
 <p>
-<%= link_to "craete new expense", new_expense_path %>
+  <%= link_to "craete new expense", new_expense_path %>
 </p>
-
 <table>
   <tr>
     <th> Image</th>
@@ -11,7 +10,7 @@
   <% @all_expenses.each do |e|%>
     <tr>
       <td>
-          <%= image_tag rails_blob_path(e.image,disposition: "attachment") %>
+        <%= image_tag e.image.variant(resize: "50x50") %>
       </td>
       <td> <%= e.detail %> </td>
       <td> <%= e.price %> </td>

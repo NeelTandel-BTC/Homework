@@ -11,6 +11,8 @@ gem 'rails', '~> 5.2'
 # Use sqlite3 as the database for Active Record
 gem 'pg', '~> 0.18.4'
 
+gem 'image_processing', '>= 1.2'
+
 gem 'devise'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
