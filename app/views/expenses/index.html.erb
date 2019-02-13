@@ -1,0 +1,19 @@
+<p>
+  <%= link_to "craete new expense", new_expense_path %>
+</p>
+<table>
+  <tr>
+    <th> Image</th>
+    <th> Detail</th>
+    <th> Price</th>
+  </tr>
+  <% @all_expenses.each do |e|%>
+    <tr>
+      <td>
+        <%= image_tag e.image.variant(resize: "50x50") %>
+      </td>
+      <td> <%= e.detail %> </td>
+      <td> <%= e.price %> </td>
+    </tr>
+  <% end %>
+</table>
