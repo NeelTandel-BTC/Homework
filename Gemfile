@@ -13,6 +13,8 @@ gem 'pg', '~> 0.18.4'
 
 gem 'image_processing', '>= 1.2'
 
+gem 'sidekiq'
+
 gem 'devise'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
