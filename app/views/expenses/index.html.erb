@@ -1,3 +1,6 @@
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
 <p>
   <%= link_to "craete new expense", new_expense_path %>
 </p>

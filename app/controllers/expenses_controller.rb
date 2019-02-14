@@ -21,4 +21,9 @@ class ExpensesController < ApplicationController
       FirstJobJob.perform_later 3
     end
   end
+
+  def self.job_done(args)
+    flash.now[:notice] = "job done in #{args}"
+    redirect_to new_expense_path
+  end
 end
