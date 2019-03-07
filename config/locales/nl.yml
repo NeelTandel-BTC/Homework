@@ -1,0 +1,4 @@
+nl:
+  hello: "Hellonl worldnl"
+  customer:
+    mobile_no_validation: 'Enter valid phone number'

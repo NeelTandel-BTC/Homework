@@ -23,5 +23,4 @@ def validate_phone_number
     errors.add(:phone_number, :invalid,message: "  :Your number is aleady register with us")
   end
 end
-  
 end

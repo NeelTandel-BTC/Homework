@@ -16,6 +16,7 @@
     <%= f.text_field :phone_number %>
   </div>
   <div class="field">
+    <%binding.pry%>
     <% @cities.each do |city| %>
       <%= f.radio_button :city_id, city.id %>
       <%= city.city %> <br />
