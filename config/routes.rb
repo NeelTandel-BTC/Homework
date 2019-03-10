@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :customer_bookings
   resources :cleaner_bookings
   resources :expenses
-  root 'customer_bookings#index'
+  get 'states', to: 'stimulus#getstates'
+  # root 'customer_bookings#index'
   # root 'expenses#index'
+  root 'stimulus#index'
 end

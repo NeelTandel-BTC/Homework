@@ -14,10 +14,6 @@ class CustomerBookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def edit
-
-  end
-
   def create
     @customer_booking = current_customer.bookings.new(booking_params)
     change_start_end_time()

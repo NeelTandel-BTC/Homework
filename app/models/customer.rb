@@ -5,7 +5,7 @@ class Customer < ApplicationRecord
          :recoverable, :rememberable, :validatable
   belongs_to :city
   has_many :bookings
-  
+
   validates :first_name, :last_name, :presence => true
   validates :phone_number,   presence: {message: I18n.t('customer.mobile_no_validation')},
                      numericality: true,
