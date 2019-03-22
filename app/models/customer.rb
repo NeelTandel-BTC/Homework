@@ -15,6 +15,10 @@ class Customer < ApplicationRecord
     false
   end
 
+  def can_validate
+    true
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end

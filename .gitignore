@@ -21,3 +21,10 @@
 /yarn-error.log
 
 .byebug_history
+
+/public/packs
+/public/packs-test
+yarn-debug.log*
+.yarn-integrity
+*.browserslistrc
+*.gitignore

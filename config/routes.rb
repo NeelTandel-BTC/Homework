@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :expenses
   get 'states', to: 'stimulus#getstates'
   # root 'customer_bookings#index'
-  # root 'expenses#index'
-  root 'stimulus#index'
+  root 'expenses#index'
+  # root 'stimulus#index'
 end
