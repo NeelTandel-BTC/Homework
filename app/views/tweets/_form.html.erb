@@ -1,0 +1,22 @@
+<%= form_with(model: tweet, local: true) do |form| %>
+  <% if tweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
+      <ul>
+        <% tweet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.label :content%>
+  <%= form.text_area :content %>
+  <br>
+  <br>
+  <%= link_to image_tag("tweeter.png", border: 0, size: '65x45')+'click for find for tweets', 'https://publish.twitter.com/#', name: 'tweet', target: '_blank' %>
+  <br>
+  <br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

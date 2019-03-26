@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tweets
   devise_for :cleaners, controllers: { sessions: 'cleaners/sessions', registrations: 'cleaners/registrations' }
   devise_for :customers, controllers: { sessions: 'customers/sessions', registrations: 'customers/registrations' }
 
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   resources :expenses
   get 'states', to: 'stimulus#getstates'
   # root 'customer_bookings#index'
-  root 'expenses#index'
+  # root 'expenses#index'
   # root 'stimulus#index'
+  root 'tweets#index'
 end
